@@ -18,6 +18,7 @@ public class Gcd {
 		}
 		return gcdFinder(a, a%b);
 		}
+	
 	public int lcmFinder(int a,int b){
 		return ((a/gcdFinder(a, b))*(b/gcdFinder(a, b))*(gcdFinder(a, b)));
 	}
