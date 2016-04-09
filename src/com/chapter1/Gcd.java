@@ -8,6 +8,8 @@ public class Gcd {
 		int b=50;
 		System.out.println("Gcd of two number is:");
 		System.out.println(new Gcd().gcdFinder(a,b));
+		System.out.println("Lcm of two number is:");
+		System.out.println(new Gcd().lcmFinder(a,b));
 
 	}
 	public int gcdFinder(int a,int b){
@@ -16,5 +18,8 @@ public class Gcd {
 		}
 		return gcdFinder(a, a%b);
 		}
+	public int lcmFinder(int a,int b){
+		return ((a/gcdFinder(a, b))*(b/gcdFinder(a, b))*(gcdFinder(a, b)));
+	}
 
 }
